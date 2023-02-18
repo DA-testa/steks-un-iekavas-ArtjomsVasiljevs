@@ -22,10 +22,10 @@ def find_mismatch(text):
                 count = i + 1
                 break
             opening_brackets_stack.pop()
-        if(count == -1 and len(opening_brackets_stack)==0):
-            return 'Success'
-        else:
-            return count + 1
+    if(count == -1 and len(opening_brackets_stack)==0):
+        return 'Success'
+    else:
+        return count + 1
             
 
 
