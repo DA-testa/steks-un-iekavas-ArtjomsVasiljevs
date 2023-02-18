@@ -28,7 +28,7 @@ def find_mismatch(text):
 
 
 def main():
-    inputW = input("F or I")
+    inputW = input()
 
     if inputW == "F":
         file_path = input("file path:")
@@ -40,9 +40,9 @@ def main():
             else:
                 print(mismatch)
 
-    elif inputW == "I":
-        text = input()
-        mismatch = find_mismatch(text)
+    else: 
+        
+        mismatch = find_mismatch(inputW)
         if mismatch == 'Success':
             print("Success")
         else:
