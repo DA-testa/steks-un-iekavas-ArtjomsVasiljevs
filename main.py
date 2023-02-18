@@ -23,7 +23,7 @@ def find_mismatch(text):
         if(count == -1 and len(opening_brackets_stack)==0):
             return 'Success'
         else:
-            return count
+            return count + 1
             
 
 
