@@ -42,12 +42,10 @@ def main():
                 print(mismatch)
 
     else: 
-        
-        mismatch = find_mismatch(inputW)
-        if mismatch == 'Success':
-            print("Success")
-        else:
-            print(mismatch)
+        if "I" in inputW:
+            text = input()
+            mismatch = find_mismatch(text)
+            print (mismatch)
     
 
 
