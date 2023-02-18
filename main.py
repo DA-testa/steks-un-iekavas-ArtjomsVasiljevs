@@ -18,12 +18,18 @@ def find_mismatch(text):
             pass
 
         if next in ")]}":
-             if(len(opening_brackets_stack)==0 or not opening_brackets_stack[-1].are_matching(next)):
-                count = i +1
-        if(count == -1 and len(opening_brackets_stack)==0):
-            return 'Success'
-        else:
-            return count + 1
+            if not opening_brackets_stack:
+                return i + 1
+            saveinstack = opening_brackets_stack.pop()
+
+            if not are_matching(saveinstack.char, next):
+                return i + 1
+                
+            if opening_brackets_stack:
+                return opening_brackets_stack[0].position + 1
+            else:
+                return 'Success'
+            pass
             
 
 
