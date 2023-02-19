@@ -37,10 +37,7 @@ def main():
         with open(file_path, "r") as f:
             text = f.read()
             mismatch = find_mismatch(text)
-            if mismatch == 'Success':
-                print("Success")
-            else:
-                print(mismatch)
+            print(mismatch)
 
     else: 
         if "I" in inputW:
