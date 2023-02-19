@@ -32,21 +32,14 @@ def find_mismatch(text):
 def main():
     inputW = input()
 
-    if inputW == "F":
-        file_path = input("file path:")
-        with open("input.txt", "r") as f:
-            text = f.read()
-            mismatch = find_mismatch(text)
-            if mismatch == 'Success':
-                print("Success")
-            else:
-                print(mismatch)
+    
+    if "I" in inputW:
+        text = input()
+        mismatch = find_mismatch(text)
+        print (mismatch)
 
-    else: 
-        if "I" in inputW:
-            text = input()
-            mismatch = find_mismatch(text)
-            print (mismatch)
+    
+        
     
 
 
